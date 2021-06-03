@@ -94,6 +94,7 @@ h2{
     padding: 0.2em 0.5em;
 }
 
+
 footer{
     background-color: #232731;
     color: #b5b7bd;
@@ -106,7 +107,7 @@ footer{
 
 @media screen and (max-width: 768px){
     body{font-size: 14px;}
-    #title-space{padding: 34px 0 12px 1em;}
+    #title-space{padding: 34px 0 12px;}
     #center{padding-left: 1em; padding-right: 1em;}
 }
 @media screen and (min-width: 768px){
