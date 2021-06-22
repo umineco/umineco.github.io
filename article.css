@@ -23,7 +23,7 @@ a{text-decoration: none;}
 
 hr{border-top: 1px solid #d9dbde; text-align: center;}
 
-emp{font-weight: 700;}
+emp{font-weight: 400;}
 
 
 
@@ -113,12 +113,12 @@ header{
 }
 
 h1{
-    border-left: 4px solid #313847;
+    border-left: 3px solid #313847;
     box-sizing: border-box;
     font-size: 1.65em;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 2px;
-    line-height: 1.3em;
+    line-height: 1.2em;
     padding-bottom: 0.1em;
     padding-left: 0.7em;
 }
@@ -128,7 +128,7 @@ h1{
     color: #707480;
     display: block;
     font-size: 0.85em;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 1px;
     margin: 1.4em 0 2.5em;
     text-align: right;
@@ -140,6 +140,7 @@ h1{
 
 #article p{
     color: #465065;
+    font-weight: 300;
     letter-spacing: 1px;
     line-height: 2em;
     margin-bottom: 1.5em;
@@ -155,7 +156,7 @@ h2{
     border-bottom: 1px solid #313847;
     display: flex;
     font-size: 1.4em;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 2px;
     margin-bottom: 1em;
     padding: 0.2em 0.5em;
