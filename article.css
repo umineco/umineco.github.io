@@ -113,10 +113,10 @@ header{
 }
 
 h1{
-    border-left: 3px solid #313847;
+    border-left: 4px solid #313847;
     box-sizing: border-box;
     font-size: 1.65em;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 2px;
     line-height: 1.3em;
     padding-bottom: 0.1em;
