@@ -23,7 +23,7 @@ a{text-decoration: none;}
 
 hr{border-top: 1px solid #d9dbde; text-align: center;}
 
-emp{font-weight: 400;}
+emp{font-weight: 700;}
 
 
 
@@ -140,7 +140,7 @@ h1{
 
 #article p{
     color: #465065;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
     line-height: 2em;
     margin-bottom: 1.5em;
@@ -175,11 +175,11 @@ footer{
 
 
 @media screen and (max-width: 768px){
-    :root{--fsize: 14.5px;} 
+    :root{--fsize: 13.5px;} 
     #center, #title-wrapper{padding-left: calc(1.5*var(--fsize)); padding-right: calc(1.5*var(--fsize));}
 }
 @media screen and (min-width: 768px){
-    :root{--fsize: 15.5px;}
+    :root{--fsize: 14.5px;}
     #center, #title-wrapper{margin: 0 auto; width: calc(45*var(--fsize));}
 }
 @media screen and (min-width: 1024px){
