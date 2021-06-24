@@ -1,4 +1,4 @@
-*{margin: 0; padding: 0; font-family: 'Noto Sans JP'; transition: all .3s ease;
+*{margin: 0; padding: 0; font-family: 'Noto Sans JP'; transition: all .2s ease;
 }
 
 body{
@@ -14,7 +14,7 @@ body{
 
 .katex {font-size: 1.1em !important; overflow-x: auto; overflow-y: hidden;}
 .katex::-webkit-scrollbar{height: 3px;}
-.katex::-webkit-scrollbar-thumb{background: #444444; border-radius: 1px;}
+.katex::-webkit-scrollbar-thumb{background: #444444; border-radius: 1.5px;}
 .katex::-webkit-scrollbar-track-piece{background: #CCCCCC;}
 
 ul{list-style-type: none;}
@@ -25,6 +25,7 @@ hr{border-top: 1px solid #d9dbde; text-align: center;}
 
 emp{font-weight: 700;}
 
+sml{font-size: 0.85em;}
 
 
 ::selection{background-color: #92959e; color: #ecedee;}
@@ -39,13 +40,11 @@ i, #path ul li:not(:first-of-type):before, .has-child::after,.expand::after{vert
     margin-left: 0.15em;
 }
 
-header{
-    margin-bottom: 4em;
-}
 
-#title-space{
+header{
     border-bottom: 1px solid #d9dbde;
     border-top: 4px solid #232731;
+    margin-bottom: 4em;
     padding: 2em 0 1.75em;
 }
 #title-wrapper{
@@ -63,19 +62,34 @@ header{
 #title:hover{
     transform: translateX(0.25em);
 }
-#title a:hover{
+#title a:hover,#top-icons li a:hover{
     color: #707480;
 }
-#ts-wrapper{
+#icon-wrapper{
+    display: flex;
     margin-left: auto;
     margin-right: 0;
-    display: none;
 }
-#top-searchbar{
-    background-color: #f7f7f7;
+#top-icons{
+    display: flex;
 }
-#ts-form{
-    position: relative;
+#top-icons li{
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    box-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: box;
+    font-size: 1.2em;
+}
+#top-icons li:not(:first-of-type){
+    margin-left: 0.5em;
+}
+#top-icons li a{
+    color: #313847;
+    display: block;
 }
 
 
@@ -185,6 +199,7 @@ footer{
 @media screen and (min-width: 1024px){
     #center, #title-wrapper{margin: 0 auto; width: calc(50*var(--fsize));}
     #date{margin-top: 0.5em;}
+    h1{font-weight: 500;}
 }
 @media screen and (min-width: 1280px){
     #center, #title-wrapper{margin: 0 auto; width: calc(60*var(--fsize));}
