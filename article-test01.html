@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: https://ogp.me/ns#">
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>記号論理と圏</title>
+        <link rel="stylesheet" href="article.css">
+        <link rel="shortcut icon" href="favicon.png" type="image/png">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
+        </style>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+        </style>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                renderMathInElement(document.body, {
+                  // customised options
+                  // • auto-render specific keys, e.g.:
+                  delimiters: [
+                      {left: '$$', right: '$$', display: true},
+                      {left: '$', right: '$', display: false},
+                      {left: '\\(', right: '\\)', display: false},
+                      {left: '\\[', right: '\\]', display: true}
+                  ],
+                  // • rendering keys, e.g.:
+                  throwOnError : false
+                });
+            });
+        </script>
+        <script>
+            MathJax = {
+              loader: {
+                load: ['[custom]/xypic.js'],
+                paths: {custom: 'https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/'}
+              },
+              tex: {
+                packages: {'[+]': ['xypic']}
+              }
+            };
+          </script>
+          <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-chtml-full.js"></script>
+          <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-svg-full.js"></script> -->
+    </head>
+    <body>
+        <header id="title-space">
+            <div id="title-wrapper">
+                <div id="title">
+                    <a href="https://umineco.github.io">無い海</a>
+                </div>
+                <div id="icon-wrapper">
+                    <ul id="top-icons">
+                        <li>
+                            <a href="https://umineco.github.io">
+                                <i class="material-icons">home</i>
+                            </a>
+                        </li><li>
+                            <a href="https://umineco.github.io/#">
+                                <i class="material-icons">coffee</i>
+                            </a>
+                        </li><li>
+                            <a href="https://umineco.github.io/#">
+                                <i class="material-icons">share</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main id="content">
+            <div id="center">
+                <div id="path">
+                    <ul>
+                        <li id="path-1">
+                            <a href="https://umineco.github.io">Home</a>
+                        </li>
+                        <li id="path-2">
+                            <a href="https://umineco.github.io/blog">Blog</a>
+                        </li>
+                        <li id="path-3">
+                            記号論理と圏
+                        </li>
+                    </ul>
+                </div>
+                <div id="center-top">
+                    <h1 id="article-title">
+                        記号論理と圏
+                    </h1>
+                    <span id="date">
+                        <div class="date-pub">
+                            <i class="material-icons">edit</i>
+                            2021/06/03 - 
+                            <i class="material-icons">restore</i>
+                            2021/06/23
+                        </div>
+                    </span>
+                </div>
+                <div id="article">
+                    <h2>圏論での$\lambda$領域</h2>
+                    <h3>$\omega$完備性について</h3>
+                    <p>
+                        <emp>定義</emp>（$\omega$完備性）
+                        <br>
+                        （1）圏$\mathbb{C}$の図式
+                        $D_0\xrightarrow{f_0} D_1\xrightarrow{f_1} D_2\to \cdots$
+                        は，「$\omega$鎖$\Delta$」（$\omega$ chain $\Delta$）と呼ばれる．
+                        （i.e. $\Delta=\{f_n \mid f_n\colon D_n\to D_{n+1}$かつ$D_n\in ob(\mathbb{C})$かつ$n\in \omega\}$．）
+                        <br>
+                        （2）$\mathbb{C}$の任意の$\omega$鎖$\Delta$について，つねにコリミットが存在するとき，$\mathbb{C}$は「$\omega$完備」（$\omega$ complete）である，と呼ばれる．
+                    </p>
+                    <p>
+                        この定義のもとで，$\mathbb{C}\mathrm{po^{ep}}$が$\omega$完備であることを示したい．しかしそのためには，準備として二つほどの定理が必要となる．
+                    </p>
+                    <p>
+                        <emp>定理2.1</emp>　
+                        $\Delta=\{f_n \mid f_n\colon D_n\to D_{n+1}, D_n\in ob(\mathbb{C}\mathrm{po^{ep}}), n\in \omega\}$
+                        を$\mathbb{C}\mathrm{po^{ep}}$の$\omega$鎖$\Delta$とし，また
+                        $\mu=\{\mu_n \mid \mu_n\colon D_n\to D_{n+1}, D_n, D\in ob(\mathbb{C}\mathrm{po^{ep}}), n\in \omega\}$
+                        を$\Delta$へのココーンとする．このとき，$\mathbb{C}\mathrm{po^{ep}}$のこの$\omega$鎖$\Delta$には，次の条件（1），（2）をみたす$\mu\colon \Delta\to D$が存在する．
+                        <br>
+                        （1）$\{\mu^e_n \circ \mu^p_n \mid n\in \omega\}$は上昇列である．<br>
+                        （2）$\{\mu^e_n \circ \mu^p_n \mid n\in \omega\}=\mathrm{id}_D$
+                    </p>
+                    <p>
+                        <emp>証明</emp>　まず$\mathrm{cpo}D\sube D_0\times D_1\times D_2\times \cdots$を，
+                        $D \xlongequal{}[df] \{\lang d_0,d_1,d_2,\cdots\rang \mid d_n\in D_n, d_n=f^p_n(d_{n+1}), n\in\omega\}$
+                        と定義する．また$D$上の$\mathrm{po}\leqslant$は，$\lang d_0,d_1,d_2,\cdots\rang \leqslant \lang d_0',d_1',d_2',\cdots\rang \xLeftrightarrow{}[df]$任意の$n\in\omega$について，$d_n\leqslant d_n'$である，と定義する．あうるとII部2章§2.3定理3.2での$D_\infty$の場合と同様にして，$D$が$\mathrm{cpo}$となることが示せる．
+                    </p>
+                    <p>
+                        次に，条件（1），（2）をみたす$\mu\colon \Delta\to D$の存在を示すために，任意の$n\in\omega$について，$\mu^e_n\colon D_n\to D, \mu^p_n\colon D\to D_n$なる連続関数を各々1），2）のように定義する．1）$\mu^e_n(d_n)=\lang d_0, d_1, d_2, \cdots\rang$，ただし$d_n\in D_n$について，$0\leqq i< n$のとき，$d_i=(f^p_i\circ f^p_{i+1}\circ \cdots \circ f^p_{n-1})(d_n), d_n=d_n$，$n< j$のとき，$d_j=(f^e_{j-1}\circ f^e_{j-2}\circ \cdots \circ f^e_{n})(d_n)$である．2）$\mu^p_n(d)=d_n$（$d=\lang d_0, d_1, d_2, \cdots$のとき）．するとこの定義のもとでは，2章§2.3定理3.3の場合と同様にして，$\mu^e_n, \mu^p_n$が$\mathrm{ep}$対であることが示せる．
+                    </p>
+                    <p>
+                        また$\mu=\{\mu_n \mid \mu_n\colon D_n\to D, D_n, D\in ob(\mathbb{C}\mathrm{po^ep}), n\in\omega\}\colon \Delta\to D$がココーンであることは，$\mu^e_n=\mu^e_{n+1}\circ f^e_n, \mu^p_n=\mu^p_n \circ \mu^p_{n+1}$を示せばよいが，これも2章§2.3定理3.4と同様に示せ，さらに$\mu\colon \Delta\to D$が条件（1），（2）をみたすことも，2章§2.3定理3.5の場合と同様にして示せる．$\blacksquare$
+                    </p>
+                </div>
+            </div>
+            <div id="sub1">
+                
+            </div>
+        </main>
+        <footer id="footer">
+            © 2021 無い海
+        </footer>
+    </body>
+</html>
