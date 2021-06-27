@@ -107,7 +107,7 @@ header{
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 1.75em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.3em;
     margin-left: -0.15em;
 }
 #path ul li{
@@ -186,6 +186,12 @@ h3{
     letter-spacing: 1px;
     margin-left: 1.5em;
     margin-bottom: 1em;
+}
+
+.hl{
+    border-top: solid 1px #92959e;
+    margin: 5em auto;
+    width: 45%;
 }
 
 #sub1{
