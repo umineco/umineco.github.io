@@ -35,7 +35,11 @@ sml{font-size: 0.85em;}
 
 i, #path ul li:not(:first-of-type):before, .has-child::after,.expand::after{vertical-align: -0.15em;}
 
-#title, #title a, #top-icons li a, #path ul li:not(:last-of-type), #path ul li a, #index li, #index li a{transition: .2s ease;}
+#title, #title a, #top-icons li a, #path ul li:not(:last-of-type), #path ul li a, #index li, #index li a, #article p a{transition: .2s ease;}
+
+#path ul li a:hover, #index li a:hover, #article a:hover{text-decoration: solid 1px underline #707480;}
+
+#title a:hover, #top-icons li a:hover, #path ul li a:hover, #index li a:hover, #article a:hover{color: #707480;}
 
 
 .expand::after{
@@ -65,9 +69,6 @@ header{
 }
 #title:hover{
     transform: translateX(0.2em);
-}
-#title a:hover,#top-icons li a:hover{
-    color: #707480;
 }
 #icon-wrapper{
     display: flex;
@@ -125,10 +126,6 @@ header{
 #path ul li:not(:last-of-type):hover{
     transform: translateX(0.2em);
 }
-#path ul li a:hover{
-    color: #707480;
-    text-decoration: solid 1px underline #707480;
-}
 
 
 h1{
@@ -164,22 +161,21 @@ h1{
     margin-bottom: calc(2.5*var(--f));
 }
 #index ul{
-    border-left: 1px solid #92959e;
+    border-left: 1px solid #313847;
     font-size: 0.9em;
     font-weight: 300;
     margin-left: 1em;
     padding-left: 2em;
 }
+#index li{
+    display: flex;
+}
 #index li a{
     color: #313847;
     text-decoration: none;
 }
-#index li:hover{
-    transform: translateX(0.2em);
-}
 #index li a:hover{
-    color: #707480;
-    text-decoration: solid 1px underline #707480;
+    transform: translateX(0.2em);
 }
 
 
@@ -191,12 +187,11 @@ h1{
     margin-bottom: 1.5em;
     text-indent: 1em;
 }
-#article a{
-    color: #3872b8;
+#article p a{
+    color: #465065;
+    text-decoration: solid 1px underline #465065;
 }
-#article a:hover{
-    text-decoration: solid 1px underline #3872b8;
-}
+
 h2{
     border-bottom: 1px solid #313847;
     display: flex;
