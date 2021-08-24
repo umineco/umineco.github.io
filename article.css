@@ -64,9 +64,10 @@ header{
     display: flex;
 }
 #title{
-    font-weight: 300;
-    font-size: 1.6em;
+    font-size: 1.5em;
+    font-weight: 400;
     letter-spacing: 2px;
+    margin-left: -0.1em;
 }
 #title a{
     color: #313847;
@@ -212,10 +213,11 @@ h2{
 h3{
     border-bottom: 1px dashed #313847;
     font-size: 1.2em;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 1px;
     margin-left: 1.5em;
     margin-bottom: 1em;
+    padding: 0 0.5em 0.2em;
 }
 
 .hl1{
@@ -230,20 +232,23 @@ h3{
     width: 30%;
 }
 
-#sub1{
-    background-color: #232731;
-    color: #f2f2f2;
+#side{
     float: right;
     height: fit-content;
     position: sticky;
     position: -webkit-sticky;
     top: 5em;
 }
+#side-wrapper{
+    background-color: #d9dbde;
+    color: #465065;
+}
 
 footer{
     background-color: #232731;
     color: #b5b7bd;
     font-size: 0.8em;
+    letter-spacing: 1px;
     margin-top: auto;
     padding: 1.5em 0;
     text-align: center;
