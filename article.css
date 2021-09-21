@@ -5,11 +5,11 @@ html{
 *{margin: 0; padding: 0;}
 
 body{
-    background-color: #f2f2f2;
+    background-color: #fff;
     color: #313847;
     display: flex;
     flex-direction: column;
-    font-family: 'Noto Sans JP';
+    font-family: 'Jost','Noto Sans JP';
     font-size: var(--f);
     min-height: 100vh;
 }
@@ -36,7 +36,7 @@ sml{font-size: 0.85em;}
 
 .float{float: left;}
 
-::selection{background-color: #b5b7bd; color: #ecedee;}
+::selection{background-color: #d9dbde; color: #92959e;}
 
 i, #path ul li:not(:first-of-type):before, .has-child::after,.expand::after{vertical-align: -0.15em;}
 
@@ -66,7 +66,7 @@ header{
 #title{
     font-size: 1.5em;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     margin-left: -0.1em;
 }
 #title a{
@@ -165,16 +165,30 @@ h1{
 
 #index{
     border: 1px solid #313847;
+    font-weight: 500;
+    letter-spacing: 2px;
     line-height: 2em;
     padding: calc(2.5*var(--f));
     margin-bottom: calc(2.5*var(--f));
 }
+#index-title{
+    border-bottom: 2px solid #313847;
+    font-size: 1.3em;
+    letter-spacing: 10px;
+    margin-bottom: 0.5em;
+    text-align: center
+}
 #index ul{
     border-left: 1px solid #313847;
-    font-size: 0.9em;
-    font-weight: 300;
-    margin-left: 1em;
+    border-bottom: 1px solid #313847;
+    font-size: 0.8em;
+    font-weight: 400;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
     padding-left: 2em;
+}
+#index ul li:first-of-type{
+    border-bottom: 1px dashed #313847;
 }
 #index li{
     display: flex;
@@ -205,7 +219,7 @@ h2{
     border-bottom: 1px solid #313847;
     display: flex;
     font-size: 1.4em;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 2px;
     margin-bottom: 1em;
     padding: 0.2em 0.5em;
