@@ -15,7 +15,7 @@ body{
 }
 
 
-.katex {font-size: 1.1em; overflow-x: auto; overflow-y: hidden;}
+.katex {font-size: 1em; overflow-x: auto; overflow-y: hidden;}
 .katex::-webkit-scrollbar{height: 3px;}
 .katex::-webkit-scrollbar-thumb{background: #444444; border-radius: 1.5px;}
 .katex::-webkit-scrollbar-track-piece{background: #CCCCCC;}
@@ -180,7 +180,6 @@ h1{
 }
 #index ul{
     border-left: 1px solid #313847;
-    border-bottom: 1px solid #313847;
     font-size: 0.8em;
     font-weight: 400;
     margin-left: 0.5em;
@@ -206,9 +205,8 @@ h1{
     color: #465065;
     font-weight: 400;
     letter-spacing: 1px;
-    line-height: 2.1em;
+    line-height: 2em;
     margin-bottom: 1.5em;
-    text-indent: 1em;
 }
 #article p a{
     color: #465065;
@@ -216,22 +214,19 @@ h1{
 }
 
 h2{
-    border-bottom: 1px solid #313847;
+    border-bottom: 2px solid #313847;
     display: flex;
     font-size: 1.4em;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 1em;
-    padding: 0.2em 0.5em;
+    padding: 0.2em 0;
 }
 h3{
-    border-bottom: 1px dashed #313847;
-    font-size: 1.2em;
+    font-size: 1.25em;
     font-weight: 400;
     letter-spacing: 1px;
-    margin-left: 1.5em;
-    margin-bottom: 1em;
-    padding: 0 0.5em 0.2em;
+    margin-bottom: 0.5em;
 }
 
 .hl1{
@@ -271,18 +266,18 @@ footer{
 
 
 @media screen and (max-width: 768px){
-    :root{--f: 13px;}
+    :root{--f: 14.5px;}
     #content, #title-wrapper{padding-left: calc(1.5*var(--f)); padding-right: calc(1.5*var(--f));}
     #content{display: block;}
     #center{margin-bottom: 4em;}
 }
 @media screen and (min-width: 768px){
-    :root{--f: 13.8px;}
+    :root{--f: 15px;}
     #content, #title-wrapper{margin: 0 auto;}
     #center, #title-wrapper{width: calc(45*var(--f));}
 }
 @media screen and (min-width: 1024px){
-    :root{--f: 14.5px;}
+    :root{--f: 15.5px;}
     #center, #title-wrapper{width: calc(50*var(--f));}
     #date{margin-top: 0.5em;}
     h1{border-left: 3.5px solid #313847;}
