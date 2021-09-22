@@ -5,13 +5,12 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>記号論理と圏 | 海切り</title>
+        <title id="page-title">ページタイトル</title>
         <link rel="stylesheet" href="article.css">
         <link rel="shortcut icon" href="https://raw.githubusercontent.com/umineco/umineco.github.io/main/favicon.png" type="image/png">
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
         </style>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
@@ -60,11 +59,11 @@
                                 <i class="material-icons">home</i>
                             </a>
                         </li><li>
-                            <a href="https://umineco.github.io/#">
+                            <a href="#">
                                 <i class="material-icons">coffee</i>
                             </a>
                         </li><li>
-                            <a href="https://umineco.github.io/#">
+                            <a href="#">
                                 <i class="material-icons">share</i>
                             </a>
                         </li>
@@ -80,23 +79,23 @@
                             <a href="https://umineco.github.io">Home</a>
                         </li>
                         <li id="path-2">
-                            <a href="https://umineco.github.io/blog">Blog</a>
+                            <a href="/blog">カテゴリ</a>
                         </li>
                         <li id="path-3">
-                            タイトルと題名
+                            記事タイトル
                         </li>
                     </ul>
                 </div>
                 <div id="center-top">
                     <h1 id="article-title">
-                        タイトルと題名
+                        記事タイトル
                     </h1>
                     <div id="date">
                         <div class="date-pub">
                             <i class="material-icons">edit</i>
-                            2021/06/03 - 
+                            y/m/d - 
                             <i class="material-icons">restore</i>
-                            2021/06/23
+                            y/m/d
                         </div>
                     </div>
                 </div>
@@ -172,6 +171,9 @@
                         <br>
                         （2）$\mathbb{C}$の任意の$\omega$鎖$\Delta$について，つねにコリミットが存在するとき，$\mathbb{C}$は「$\omega$完備」（$\omega$ complete）である，と呼ばれる．
                     </p>
+                    <p>
+                        $$DS(x)\land DS(y)\land PRG(z)\land (\exists u)_{u< x}(\exists v)_{v< x}(\exists w_1)_{w_1< x}(\exists w_2)_{w_2< y}(\exists t_1)_{t_1< x}(\exists t_2)_{t_2< x}(\exists t_3)_{t_3< x}((x=u\ast 2^{t_1}\ast 2^{w_1}\ast 2^{t_2}\ast v)\land (y=u\ast 2^{w_2}\ast 2^{t_1}\ast 2^{t_2}\ast v)\land S(w_1)\land S(w_2)\land TP(t_1)\land TP(t_2)\land TP(t_3)\land (\exists i)_{i< lh(z)}((z)_i =p_0^{w_1}\cdot p_1^{t_2}\cdot p_2^{t_3}\cdot p_3^3 \cdot p_4^{w_2}))$$
+                    </p>
                     <div class="hl1"></div>
                     <h2>トポスでの選択公理$\mathsf{AC}$</h2>
                     <img class="float" src="https://raw.githubusercontent.com/umineco/umineco.github.io/main/favicon.png"">
@@ -181,7 +183,22 @@
                     
                     <p>
                         しかし一方で，この$\mathsf{AC}$を前提とするとき，常識では想像しにくいような結果が引き出されてくることも良く知られている．たとえば$\mathsf{AC}$が登場するきっかけにもなった整列可能定理をはじめ，パラドックスにすら見えるバナッハ（Banach, S.）-タルスキーの定理などが，その代表的なものであろう．そこでかつては，$\mathsf{AC}$の非構成的な性格も手伝って，多くの論者から，$\mathsf{AC}$の正当性について疑問が投げかけられたこともあった．
+                        <a href="https://umineco.github.io">LINK</a>
                     </p>
+                </div>
+                <div id="article-end">
+                    <div id="next-sign">
+                        <span><i>NEXT</i></span>
+                        <span><i>PREVIOUS</i></span>
+                    </div>
+                    <div id="next-article">
+                        <span>
+                            <a href="#">次記事タイトル</a>
+                        </span>
+                        <span>
+                            <a href="#">前記事タイトル</a>
+                        </span>
+                    </div>
                 </div>
             </div>
             <div id="side">
