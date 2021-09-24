@@ -9,7 +9,7 @@ body{
     color: #313847;
     display: flex;
     flex-direction: column;
-    font-family: 'Jost','Noto Sans JP';
+    font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', 'Yu Gothic UI', 'M+ 1p', sans-serif;
     font-size: var(--f);
     min-height: 100vh;
 }
@@ -38,15 +38,15 @@ sml{font-size: 0.85em;}
 
 ::selection{background-color: #d9dbde; color: #92959e;}
 
-i.material-icons, #path ul li:not(:first-of-type):before, .has-child::after,.expand::after{vertical-align: -0.15em;}
+i, #path ul li:not(:first-of-type):before, .has-child::after,.expand::after{vertical-align: -0.15em;}
 
-#title, #title a, #top-icons li a, #path ul li:not(:last-of-type), #path ul li a, #index li, #index li a, #article a, #next-article>span, #next-article a{transition: .2s ease;}
+#title a, #top-icons li a, #path ul li:not(:last-of-type), #path ul li a, #index li, #index li a, #article a, #next-article>span, #next-article a{transition: .2s ease;}
 
 #path ul li a:hover, #index li a:hover, #article a:hover{text-decoration: solid 1px underline #707480;}
 
 #title a:hover, #top-icons li a:hover, #path ul li a:hover, #index li a:hover, #article p a:hover, #next-article a:hover{color: #707480;}
 
-#title:hover, #path ul li:not(:last-of-type):hover, #index li a:hover, #next-article>span:last-of-type:hover{
+#path ul li:not(:last-of-type):hover, #index li a:hover, #next-article>span:last-of-type:hover{
     transform: translateX(0.2em);
 }
 #next-article>span:first-of-type:hover{
@@ -72,8 +72,8 @@ header{
 }
 #title{
     font-size: 1.5em;
-    font-weight: 400;
-    letter-spacing: 4px;
+    font-weight: 380;
+    letter-spacing: 2px;
 }
 #title a{
     color: #313847;
@@ -97,7 +97,7 @@ header{
     display: -moz-box;
     display: -o-box;
     display: box;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 #top-icons li:not(:first-of-type){
     margin-left: 0.5em;
@@ -139,6 +139,7 @@ header{
     font-weight: bold;
 }
 
+
 #center-top{
     margin-bottom: 2.5em;
 }
@@ -158,13 +159,13 @@ h1{
     color: #707480;
     display: block;
     font-size: 0.8em;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 1px;
     margin-top: 1em;
     text-align: right;
 }
 #date i{
-    font-size: 110%;
+    font-size: 1.1em;
 }
 
 
@@ -173,8 +174,8 @@ h1{
     font-weight: 500;
     letter-spacing: 2px;
     line-height: 2em;
-    padding: calc(2.5*var(--f));
-    margin-bottom: calc(2.5*var(--f));
+    padding: 2.5em;
+    margin-bottom: 4em;
 }
 #index-title{
     border-bottom: 2px solid #313847;
@@ -220,7 +221,7 @@ h1{
 }
 
 h2{
-    border-bottom: 2px solid #313847;
+    border-bottom: 1px solid #313847;
     display: flex;
     font-size: 1.4em;
     font-weight: 500;
@@ -247,8 +248,9 @@ h3{
 }
 
 #next-sign{
+    color: #707480;
     font-size: 0.8em;
-    font-weight: 300;
+    font-weight: 400;
     display: flex;
     justify-content: space-between;
     letter-spacing: 5px;
@@ -289,7 +291,7 @@ h3{
 
 footer{
     background-color: #232731;
-    color: #b5b7bd;
+    color: #d9dbde;
     font-size: 0.8em;
     letter-spacing: 1px;
     margin-top: auto;

@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="ja" prefix="og: https://ogp.me/ns#">
-
-<html>
-    <head>
+<html lang="ja">
+    <head prefix="og: https://ogp.me/ns#">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title id="page-title">ページタイトル</title>
+        <meta name="og:url" content="#" id="og-url">
+        <meta name="og:title" content="#" id="og-title">
+        <meta name="og:image" content="#" id="og-image">
+        <meta name="og:type" content="#" id="og-type">
+        <meta name="twitter:card" content="summary_large_image">
+        <title id="page-title"></title>
         <link rel="stylesheet" href="article.css">
         <link rel="shortcut icon" href="https://raw.githubusercontent.com/umineco/umineco.github.io/main/favicon.png" type="image/png">
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200..700&display=swap');
             @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap');
         </style>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 renderMathInElement(document.body, {
@@ -50,21 +53,21 @@
         <header id="title-space">
             <div id="title-wrapper">
                 <div id="title">
-                    <a href="https://umineco.github.io">海切り</a>
+                    <a href="https://umineco.github.io" class="blog-title"></a>
                 </div>
                 <div id="icon-wrapper">
                     <ul id="top-icons">
                         <li>
-                            <a href="https://umineco.github.io">
-                                <i class="material-icons">home</i>
+                            <a href="/info">
+                                <i class="material-icons-outlined">info</i>
                             </a>
                         </li><li>
-                            <a href="#">
-                                <i class="material-icons">coffee</i>
+                            <a href="/sitemap">
+                                <i class="material-icons-outlined">map</i>
                             </a>
                         </li><li>
-                            <a href="#">
-                                <i class="material-icons">share</i>
+                            <a href="/search">
+                                <i class="material-icons-outlined">search</i>
                             </a>
                         </li>
                     </ul>
@@ -78,24 +81,22 @@
                         <li id="path-1">
                             <a href="https://umineco.github.io">Home</a>
                         </li>
-                        <li id="path-2">
-                            <a href="/blog">カテゴリ</a>
+                        <li>
+                            <a href="#" id="path-2"></a>
                         </li>
                         <li id="path-3">
-                            記事タイトル
+                            <span class="article-title"></span>
                         </li>
                     </ul>
                 </div>
                 <div id="center-top">
-                    <h1 id="article-title">
-                        記事タイトル
-                    </h1>
+                    <h1 id="article-title" class="article-title"></h1>
                     <div id="date">
-                        <div class="date-pub">
+                        <div>
                             <i class="material-icons">edit</i>
-                            y/m/d - 
+                            <span id="date-published"></span>
                             <i class="material-icons">restore</i>
-                            y/m/d
+                            <span id="date-changed"></span>
                         </div>
                     </div>
                 </div>
@@ -180,7 +181,6 @@
                     <p>
                         「任意の集合$x$について，ある関数$f$が存在して，$x$の空でない任意の部分集合$y$について，$f(y)\in y$が成立する．」この命題が集合論での選択公理$\mathsf{AC}$の代表的な表現の一つであること，またそこでの$f$が選択関数と呼ばれることなど，すでにI部4章§4.1で触れたとおりである．そしてその意味内容も，有限集合や加算無限集合などの身近な場面でイメージする限り，きわめて自明的であり，特別に問題はなさそうである．
                     </p>
-                    
                     <p>
                         しかし一方で，この$\mathsf{AC}$を前提とするとき，常識では想像しにくいような結果が引き出されてくることも良く知られている．たとえば$\mathsf{AC}$が登場するきっかけにもなった整列可能定理をはじめ，パラドックスにすら見えるバナッハ（Banach, S.）-タルスキーの定理などが，その代表的なものであろう．そこでかつては，$\mathsf{AC}$の非構成的な性格も手伝って，多くの論者から，$\mathsf{AC}$の正当性について疑問が投げかけられたこともあった．
                         <a href="https://umineco.github.io">LINK</a>
@@ -188,26 +188,24 @@
                 </div>
                 <div id="article-end">
                     <div id="next-sign">
-                        <span><i>NEXT</i></span>
-                        <span><i>PREVIOUS</i></span>
+                        <span>NEXT</span>
+                        <span>PREV</span>
                     </div>
                     <div id="next-article">
                         <span>
-                            <a href="#">次記事タイトル</a>
+                            <a href="#" id="article-next"></a>
                         </span>
                         <span>
-                            <a href="#">前記事タイトル</a>
+                            <a href="#" id="article-prev"></a>
                         </span>
                     </div>
-                </div>
-            </div>
-            <div id="side">
-                <div id="side-wrapper">
                 </div>
             </div>
         </main>
         <footer id="footer">
-            海切り © 2021- 鷗海ねこ
+            <span class="blog-title"></span> ©2021<span id="copyright-year"></span> 鷗海ねこ
         </footer>
     </body>
+    <script src="all.js"></script>
+    <script src="article-test01.js"></script>
 </html>
