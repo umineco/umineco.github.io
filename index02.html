@@ -3,22 +3,6 @@
     <head>
     </head>
     <script src="jquery-3.6.0.min.js"></script>
-    <script>
-    $("head").load("common.html", function(data) {
-        var scripts = $(data).find("script");
-        if (scripts.length) {
-            $(scripts).each(function() {
-                if ($(this).attr("src")) {
-                    $.getScript($(this).attr("src"));
-                }
-                else {
-                    eval($(this).html());
-                }
-            });
-        }
-
-    });
-    </script>
     <body>
         <div id="box">
             $F=ma$
@@ -29,5 +13,20 @@
         $(function(){
             $("#box2").load("atcl.html")
         })
+    </script>
+    <script>
+        $("head").load("common.html", function(data) {
+            var scripts = $(data).find("script");
+            if (scripts.length) {
+                $(scripts).each(function() {
+                    if ($(this).attr("src")) {
+                        $.getScript($(this).attr("src"));
+                    }
+                    else {
+                        eval($(this).html());
+                    }
+                });
+            }
+        });
     </script>
 </html>
