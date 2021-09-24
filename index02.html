@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <meta charset="utf-8">
-        <title>くぇｒｔｙ</title>
+    <head id="head">
+        <script src="jquery-3.6.0.min.js"></script>
     </head>
+    <script>
+        $(function(){
+            $("#head").load("common.html");
+        })
+    </script>
     <body>
         <div id="box"></div>
-        <script>
-            $(function(){
-                $("#box").load("common.html");
-            })
-        </script>
     </body>
 </html>
