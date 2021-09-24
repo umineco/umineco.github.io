@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-    <head id="head">
+    <head>
     </head>
     <script src="jquery-3.6.0.min.js"></script>
     <script>
-    $("#content").load("common.html", function(data) {
+    $("head").load("common.html", function(data) {
         var scripts = $(data).find("script");
         if (scripts.length) {
             $(scripts).each(function() {
