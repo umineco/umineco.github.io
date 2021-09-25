@@ -1,5 +1,6 @@
 var ogurl ="https://umineco.github.io/blog/article-test01"; //OGP:URL
-var ogimage ="https://github.com/umineco/umineco.github.io/blob/main/image/thumbnail-1.png"; //OGP:画像
+var ogimage ="https://raw.githubusercontent.com/umineco/umineco.github.io/main/image/thumbnail-1.png"; //OGP:画像
+var pagetitle =articletitle+" - "+blogtitle; //ページタイトル
 var secpath ="ブログ"; //第2パス
 var secpathurl ="/blog"; //第2パスURL
 var articletitle ="記号論理と圏";//記事タイトル
@@ -12,11 +13,13 @@ var articleprevurl ="/blog/prev" //前の記事URL
 
 document.getElementById("og-url").setAttribute("content",ogurl)
 
-document.getElementById("og-type").setAttribute("content","article") //OGP:タイトル
+document.getElementById("og-title").setAttribute("content",pagetitle) //OGP:タイトル
+
+document.getElementById("og-type").setAttribute("content","article")
 
 document.getElementById("og-image").setAttribute("content",ogimage)
 
-document.getElementById("page-title").innerHTML =articletitle+" - "+blogtitle //ページタイトル
+document.getElementById("page-title").innerHTML =pagetitle
 
 document.getElementById("path-2").innerHTML =secpath
 document.getElementById("path-2").setAttribute("href",secpathurl)
