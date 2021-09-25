@@ -40,13 +40,13 @@ sml{font-size: 0.85em;}
 
 i, #path ul li:not(:first-of-type):before, .has-child::after,.expand::after{vertical-align: -0.15em;}
 
-#title a, #top-icons li a, #path ul li:not(:last-of-type), #path ul li a, #index li, #index li a, #article a, #next-article>span, #next-article a{transition: .2s ease;}
+#title a, #top-icons li a, #path ul li:not(:last-of-type), #path ul li a, #index, #index a, #article a, #next-article>span, #next-article a{transition: .2s ease;}
 
-#path ul li a:hover, #index li a:hover, #article a:hover{text-decoration: solid 1px underline #707480;}
+#path ul li a:hover, #index a:hover, #article a:hover{text-decoration: solid 1px underline #707480;}
 
-#title a:hover, #top-icons li a:hover, #path ul li a:hover, #index li a:hover, #article p a:hover, #next-article a:hover{color: #707480;}
+#title a:hover, #top-icons li a:hover, #path ul li a:hover, #index a:hover, #article p a:hover, #next-article a:hover{color: #707480;}
 
-#path ul li:not(:last-of-type):hover, #index li a:hover, #next-article>span:last-of-type:hover{
+#path ul li:not(:last-of-type):hover, #index a:hover, #next-article>span:last-of-type:hover{
     transform: translateX(0.2em);
 }
 #next-article>span:first-of-type:hover{
@@ -72,7 +72,7 @@ header{
 }
 #title{
     font-size: 1.5em;
-    font-weight: 380;
+    font-weight: 400;
     letter-spacing: 2px;
 }
 #title a{
@@ -163,7 +163,7 @@ h1{
     font-size: 0.8em;
     font-weight: 400;
     letter-spacing: 1px;
-    margin-top: 1em;
+    margin-top: 1.3em;
     text-align: right;
 }
 #date i{
@@ -185,27 +185,26 @@ h1{
     letter-spacing: 10px;
     margin-bottom: 0.5em;
 }
+#index span, #index li{
+    display: flex;
+}
 #index ul{
     border-left: 1px solid #313847;
     font-size: 0.8em;
     font-weight: 400;
     margin-left: 0.5em;
-    margin-bottom: 0.5em;
     padding-left: 2em;
 }
 #index ul li:not(:last-of-type){
     border-bottom: 1px dashed #313847;
 }
-#index li{
-    display: flex;
-}
-#index li a{
+#index a, #index ul a{
     color: #313847;
     text-decoration: none;
 }
 
 #article{
-    margin-bottom: 4em;
+    margin-bottom: 5em;
 }
 #article p{
     color: #465065;
@@ -227,6 +226,7 @@ h2{
     font-size: 1.4em;
     font-weight: 500;
     letter-spacing: 1px;
+    margin-top: 5em;
     margin-bottom: 1em;
 }
 h3{
