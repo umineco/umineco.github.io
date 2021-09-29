@@ -1,6 +1,6 @@
 @font-face {
     font-family: "meto";
-    src: url(/.font/Metropolis-RegularItalic.woff2);
+    src: url(".font/Metropolis-RegularItalic.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
 }
