@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "meto";
+    src: url(/.font/Metropolis-RegularItalic.woff2);
+    font-weight: 500;
+    font-style: normal;
+}
+body{
+    font-family: "meto",  sans-serif;
+    text-decoration: underline;
+}
