@@ -15,10 +15,10 @@ body{
 }
 
 
-.katex {font-size: 1.05em !important; overflow-x: auto; overflow-y: hidden; margin-left: 0.15em; margin-right: 0.15em;}
-.katex::-webkit-scrollbar{height: 3px;}
-.katex::-webkit-scrollbar-thumb{background: #465065; border-radius: 1.5px;}
-.katex::-webkit-scrollbar-track-piece{background: #CCCCCC;}
+.katex{font-size: 1.05em !important; overflow-x: auto; overflow-y: hidden; margin-left: 0.15em; margin-right: 0.15em; scrollbar-color: #465065 #d9dbde; scrollbar-width: thin;}
+.katex::-webkit-scrollbar{height: 5px;}
+.katex::-webkit-scrollbar-thumb{background: #465065;}
+.katex::-webkit-scrollbar-track-piece{background: #d9dbde;}
 
 ul{list-style-type: none;}
 
