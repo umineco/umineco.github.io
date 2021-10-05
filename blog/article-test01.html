@@ -15,13 +15,44 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/0-font/css/Metropolis.css">
-        <link rel="shortcut icon" href="/0-image/favicon.png" type="image/png">
+        <link rel="stylesheet" href="../0-font/css/Metropolis.css">
+        <link rel="shortcut icon" href="../0-image/favicon.png" type="image/png">
 
-        <link rel="stylesheet" href="/0-template/article/article.css">
+        <link rel="stylesheet" href="../0-template/article/article.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
 
-        <link rel="stylesheet" href="/0-render/katex/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+        <script defer src="../0-render/katex/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+        <script defer src="../0-render/katex/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                renderMathInElement(document.body, {
+                  // customised options
+                  // • auto-render specific keys, e.g.:
+                  delimiters: [
+                      {left: '$$', right: '$$', display: true},
+                      {left: '$', right: '$', display: false},
+                      {left: '\\(', right: '\\)', display: false},
+                      {left: '\\[', right: '\\]', display: true}
+                  ],
+                  // • rendering keys, e.g.:
+                  throwOnError : false
+                });
+            });
+        </script>
+        
+        <script>
+            MathJax = {
+              loader: {
+                load: ['[custom]/xypic.js'],
+                paths: {custom: '../0-render/xypic'}
+              },
+              tex: {
+                packages: {'[+]': ['xypic']}
+              }
+            };
+          </script>
+          <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-chtml-full.js"></script>
+          <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-svg-full.js"></script> -->
     </head>
     <body>
         <header id="title-space">
@@ -219,7 +250,7 @@
         <footer id="footer" class="noselect">
             <span class="blog-title"></span> ©2021<span id="copyright-year"></span> <span class="webmaster"></span>
         </footer>
-        <script src="/0-template/all.js"></script>
+        <script src="../0-template/all.js"></script>
         <script src="js/article-test01.js"></script>
     </body>
 </html>
