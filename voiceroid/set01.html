@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head prefix="og: https://ogp.me/ns#">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta http-equiv="Cache-Control" content="public">
+        <title id="page-title"></title>
+
+        <meta name="og:url" content="https://umineco.github.io/voiceroid/set01" id="og-url">    <!--change-->
+        <meta name="og:title" content="集合論メモ#1 - Empty Necoset" id="og-title">   <!--change-->
+        <meta name="og:image" content="https://umineco.github.io/0-image/thumbnail.png" id="og-image">
+        <meta name="og:type" content="article" id="og-type">
+        <meta name="twitter:card" content="summary_large_image">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../0-font/css/Metropolis.css">
+        <link rel="shortcut icon" href="../0-image/favicon.png" type="image/png">
+
+        <link rel="stylesheet" href="../0-template/article/article.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
+
+        <link rel="stylesheet" href="../0-render/katex/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+        <script defer src="../0-render/katex/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+        <script defer src="../0-render/katex/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                renderMathInElement(document.body, {
+                  // customised options
+                  // • auto-render specific keys, e.g.:
+                  delimiters: [
+                      {left: '$$', right: '$$', display: true},
+                      {left: '$', right: '$', display: false},
+                      {left: '\\(', right: '\\)', display: false},
+                      {left: '\\[', right: '\\]', display: true}
+                  ],
+                  // • rendering keys, e.g.:
+                  throwOnError : false
+                });
+            });
+        </script>
+        
+        <script>
+            MathJax = {
+              loader: {
+                load: ['[custom]/xypic.js'],
+                paths: {custom: '../0-render/xypic'}
+              },
+              tex: {
+                packages: {'[+]': ['xypic']}
+              }
+            };
+          </script>
+          <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-chtml-full.js"></script>
+          <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.4/es5/tex-svg-full.js"></script> -->
+    </head>
+    <body>
+        <header id="title-space">
+            <div id="title-wrapper">
+                <span id="title" class="noselect">
+                    <a href="/" class="blog-title"></a>
+                </span>
+                <div id="icon-wrapper">
+                    <ul id="top-icons" class="noselect">
+                        <li>
+                            <a href="/about">
+                                <i class="material-icons-outlined">info</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/sitemap">
+                                <i class="material-icons-outlined">map</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/search">
+                                <i class="material-icons-outlined">search</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="content">
+            <div id="center">
+                <div id="center-top">
+                    <div id="path">
+                        <ul>
+                            <li>
+                                <a href="/" id="path-1">Home</a>
+                            </li>
+                            <li>
+                                <a href="#" id="path-2"></a>
+                            </li>
+                            <li id="path-3">
+                                <span class="article-title"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1 id="article-title" class="article-title"></h1>
+                    <div id="date">
+                        <div>
+                            <i class="material-icons noselect">edit</i>
+                            <span id="date-published"></span>
+                            <i class="material-icons noselect">restore</i>
+                            <span id="date-changed"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="article">
+                    <p>
+                        集合論の簡単な動画を作る予定なのでメモと整理．元々Overleafで書くつもりだったがあまりに接続が切れるのでここに書く事にした．あくまでメモなので甘い表現がかなりある．
+                    </p>
+                    <div id="index">
+                        <div id="index-title">INDEX</div>
+                        <div id="index-content">
+                            <div>
+                                <span class="section"><a href="#01">1.一階述語論理</a></span>
+                                <ul>
+                                    <li><a href="#01-01">title1</a></li>
+                                    <li><a href="#01-02">title2</a></li>
+                                </ul>
+                                <span class="section"><a href="#02">2.${\sf ZFC}$</a></span>
+                                <ul>
+                                    <li><a href="#02-01">title1</a></li>
+                                    <li><a href="#02-01">title2</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 id="01">1. 一階述語論理</h2>
+                    <h3 id="01-01">1.1 言語の導入</h3>
+                    <p class="before-ol">
+                        <b>定義1.1.1</b>　<strong>記号</strong>（symbol）とは，次の1.-7.をいう．
+                    </p>
+                    <ol>
+                            <li>$\bot$</li>
+                            <li>$a,b,c,\cdot$（ラテンアルファベット小文字前半）</li>
+                            <li>$\bar{x},\bar{y},\bar{z},\cdots$（ラテンアルファベット小文字後半の上に線を付したもの）</li>
+                            <li>$x,y,z,\cdots$（ラテンアルファベット小文字後半）</li>
+                            <li>$\rarr,\land,\lor,\lnot,\forall,\exists$</li>
+                            <li>$\in$</li>
+                            <li>$(,)$</li>
+                    </ol>
+                    <p>
+                        <strong>命題定数</strong>（proposition constant），<strong>対象定数</strong>（indivisual constant），<strong>自由変数</strong>（free variable），<strong>束縛変数</strong>（bound variable），<strong>論理記号</strong>（logical sign），<strong>特殊記号</strong>（specific sign），<strong>括弧</strong>（parentheses）とは，各々上記1.-7.をいう．<br>
+                        <strong>対象変数</strong>（indivisual variable）とは，自由変数および束縛変数をいう．
+                    </p>
+
+                    <p>
+                        <b>規則1.1.2</b>　既に存在を宣言されたものは，記号ではない任意の文字を用いて表すことができる．記号ではない文字$\Gamma$によって表されるものを単に$\Gamma$という．<br>
+                        <b>例1</b>　「$\beta$は束縛変数または自由変数である」とは「$\beta$によって表されるものは束縛変数または自由変数である」をいう．
+                    </p>
+
+                    <aside>
+                        <p>[1] <strong>記号列</strong>（string）ともいう．</p>
+                    </aside>
+                    <p class="before-ol">
+                        <b>定義1.1.</b>　<strong>表現</strong>（expression）<small>[1]</small>とは，次の1.-2.によって表現であるとされたものをいう．
+                    </p>
+                    <ol>
+                        <li>$\sigma$が対象定数，自由変数，束縛変数，論理記号，特殊記号，括弧のいずれかならば，$\sigma$は表現である．</li>
+                        <li>$\Sigma$が表現であり，$\sigma$が対象定数，自由変数，束縛変数，論理記号，特殊記号，括弧のいずれかならば，$\Sigma$の右側に$\sigma$を書き加えたものは表現である．</li>
+                    </ol>
+
+                    <p class="after-ol before-ol">
+                        <b>定義</b>　<strong>項</strong>（term）とは，次の1.-2.によって項であるとされたものをいう．
+                    </p>
+                    <ol>
+                        <li>対象定数は項である．</li>
+                        <li>自由変数は項である．</li>
+                    </ol>
+
+                    <p class="after-ol">
+                        <b>定義</b>　$A(\bar{x})$とは，
+                    </p>
+
+                    <p>
+                        <b>定義</b>　<strong>論理式</strong>（formula）とは，次の1.-によって論理式であるとされたものをいう．
+                    </p>
+
+                    
+                </div>
+                <div id="article-end">
+                    <div id="next-sign">
+                        <span>NEXT</span>
+                        <span>PREV</span>
+                    </div>
+                    <div id="next-article">
+                        <span>
+                            <a href="#" id="article-next"></a>
+                        </span>
+                        <span>
+                            <a href="#" id="article-prev"></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer" class="noselect">
+            <span class="blog-title"></span> ©2021<span id="copyright-year"></span> <span class="webmaster"></span>
+        </footer>
+        <script src="../0-template/all.js"></script>
+        <script src="js/set01.js"></script>    <!--change-->
+    </body>
+</html>
