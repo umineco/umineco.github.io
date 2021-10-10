@@ -26,11 +26,9 @@ a{text-decoration: none;}
 
 hr{border-top: 1px solid #d9dbde; text-align: center;}
 
-img{margin: 0.5em 2em 0; height: 10%; min-height: 5em; width: 10%; min-width: 5em;}
+b,strong,emp{font-weight: 700;}
 
-emp{font-weight: 700;}
-
-sml{font-size: 0.85em;}
+small{font-size: 0.8em; vertical-align: text-bottom;}
 
 .floatl{float: left;}
 .floatr{float: right;}
@@ -199,7 +197,7 @@ h1{
     margin-bottom: 5rem;
     font-size: 0.95rem;
 }
-#article p{
+#article p, #article ol{
     color: #465065;
     font-weight: 400;
     letter-spacing: 0.1em;
@@ -221,13 +219,24 @@ h1{
     position: absolute;
     width: 100%;
 }
+.before-ol{
+    margin-bottom: 0.7rem !important;
+}
+.after-ol{
+    margin-top: 1.5rem;
+}
+#article ol{
+    line-height: 1.9;
+    margin-bottom: 0.7rem;
+    padding-left: 1.5em;
+}
 
 aside{
     border-left: 1px dashed #313847;
     float: right;
     margin-left: 1em;
     padding: 0.5em 0 0.5em 1em;
-    width: 40%;
+    max-width: 40%;
 }
 aside>p{
     color: #707480;
